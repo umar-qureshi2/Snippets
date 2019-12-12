@@ -3,25 +3,21 @@
   xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Surround with retry block</Title>
-      <Shortcut>shortcutsdontwork</Shortcut>
+      <Title>retry</Title>
+      <Shortcut>retry</Shortcut>
       <Description>
         SurroundsWith snippet
         Places the code block inside a retry block
       </Description>
       <Author>Umar Qureshi</Author>
       <SnippetTypes>
+		<SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
     </Header>
     <Snippet>
       <Code Language="XML">
-        <![CDATA[Resilience.WaitAndRetryTransactionDeadlock((transaction) =>
-                {
-                    
-        $selected$
-        
-                });$end$]]>
+        <![CDATA[return Resilience.WaitAndRetryTransactionDeadlock((transaction) =>{$selected$});$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>
